@@ -1,0 +1,57 @@
+﻿header h1 {
+    font-size: 250%;
+    line-height: 1.1;
+    font-weight: normal;
+}
+
+footer {
+  	height: auto;
+  	background-color: #f5f5f5;
+}
+footer > .container {
+    padding: 20px 15px 0 15px;
+    margin-top: 20px;
+}
+
+.navbar-static-top {
+    margin-bottom: 19px;
+}
+
+.profile {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#posts div:last-child {
+    background-image:none;
+    padding-bottom:0;
+}
+
+.post {
+    background-image:url('../images/threedots.png'); 
+    background-position:bottom center;
+    background-repeat:no-repeat;
+    margin-bottom:30px;
+    padding-bottom:20px;
+}
+
+#comments .title, #comments .user {
+    display:inline;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 450px) {
+    /* Remove the padding we set earlier */
+    header,
+    footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    h1, h2 {
+        font-size: 150% !important;
+    }
+    h3, h4, h5 {
+        font-size: 100% !important;
+    }
+}

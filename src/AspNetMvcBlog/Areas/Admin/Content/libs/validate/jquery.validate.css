@@ -1,0 +1,11 @@
+﻿.form-group span.error {
+	color: #B94A48;
+	font-size: 11px;
+	font-weight: 600;
+}
+.form-group.error {
+	padding-bottom: .5em;
+}
+.form-group.error div.clean {
+	display: none;
+}

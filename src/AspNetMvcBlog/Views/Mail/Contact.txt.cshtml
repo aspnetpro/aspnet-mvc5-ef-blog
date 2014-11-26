@@ -1,0 +1,10 @@
+﻿@model AspNetMvcBlog.Models.FormModel.ContactForm
+@{
+    Layout = null;
+}
+
+Nome..: @Html.Raw(Model.Name)
+Email.: @Html.Raw(Model.Email)
+Data..: @DateTime.Now.ToLongDateString()
+
+@Html.Raw(Model.Message)

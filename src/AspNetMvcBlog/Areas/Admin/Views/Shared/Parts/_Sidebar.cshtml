@@ -1,0 +1,23 @@
+﻿<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+            <li>
+                <a href="@Url.RouteUrl("Admin.Dashboard.Index")" class="@SetActive(ViewBag.MenuLinkDashboard)">
+                    <i class="fa fa-dashboard fa-fw"></i> Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="@Url.RouteUrl("Admin.Posts.Index")" class="@SetActive(ViewBag.MenuLinkPosts)">
+                    <i class="fa fa-file fa-fw"></i> Posts
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+@functions {
+    string SetActive(bool? isActive)
+    {
+        return (isActive.HasValue && isActive.Value) ? "active" : "";
+    }
+}

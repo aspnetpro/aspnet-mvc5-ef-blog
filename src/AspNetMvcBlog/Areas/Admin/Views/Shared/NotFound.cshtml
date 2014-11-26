@@ -1,0 +1,21 @@
+﻿
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Página 400</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <p>Essa página não foi encontrada: @ViewBag.RequestedUrl</p>
+        @if (ViewBag.ReferrerUrl != null)
+        {
+            <p>Volte para a <a href="@ViewBag.ReferrerUrl">página anterior</a>.</p>
+        }
+
+        @* Error page must be longer than 512 bytes for IE and Chrome to show it.
+            So add padding in case we're short. *@
+        @(new string(' ', 512))
+    </div>
+</div>

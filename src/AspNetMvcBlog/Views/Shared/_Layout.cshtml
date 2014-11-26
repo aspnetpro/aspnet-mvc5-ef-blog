@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>@ViewBag.Title - ASP.NET Blog</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Michel Banagouro" />
+    <meta name="description" content="Blog desenvolvido no curso de ASP.NET MVC" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="~/content/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="~/content/libs/bootstrap/themes/bootstrap.readable.min.css" rel="stylesheet" media="screen" />
+    <link href="~/content/css/custom.css" rel="stylesheet" media="screen" />
+    <link href="~/content/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    @RenderSection("CssPage", false)
+
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="~/content/libs/font-awesome/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="~/content/js/html5shiv.js"></script>
+        <script src="~/content/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    @Html.Partial("Parts/_Header")
+    <div id="main" class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8">
+                @RenderBody()
+            </div>
+            <div class="col-md-4">
+                @Html.Partial("Parts/_Sidebar")
+            </div>
+        </div>
+    </div>
+    @Html.Partial("Parts/_Footer")
+    <script src="~/content/js/jquery-2.0.3.min.js"></script>
+    <script src="~/content/libs/bootstrap/js/bootstrap.min.js"></script>
+    @RenderSection("ScriptPage", false)
+</body>
+</html>

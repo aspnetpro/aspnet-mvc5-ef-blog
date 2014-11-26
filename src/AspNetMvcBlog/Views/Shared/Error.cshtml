@@ -1,0 +1,7 @@
+﻿@model HandleErrorInfo
+
+<h1>Página 500</h1>
+<div class="alert alert-danger">
+    <p>Desculpe o transtorno, ocorreu um erro interno do servidor.</p>
+    <p class="text-muted">@Model.Exception.GetBaseException().Message</p>
+</div>

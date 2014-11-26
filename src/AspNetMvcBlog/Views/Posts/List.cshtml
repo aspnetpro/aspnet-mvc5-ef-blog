@@ -1,0 +1,41 @@
+﻿@using AspNetMvcBlog.Models.ViewModel
+@using AspNetMvcBlog.Application
+@using AspNetMvcBlog.Models.Entities
+@model PagedList<Post>
+@{
+    ViewBag.Title = "Absolutamente tudo sobre ASP.NET";
+}
+
+@if (Model.Count() == 0)
+{
+    <div class="alert alert-info">
+        <p>Nenhum post encontrado</p>
+    </div>
+}
+
+<section id="posts">
+    @foreach (var item in Model)
+    {
+        <div class="post">
+            <h2><a href="@Url.RouteUrl("Posts.Details", new { permalink = item.Permalink })">@item.Title</a></h2>
+            <p class="text-muted">
+                Posted on <a href="#">@item.PublishedOn.ToShortDateString()</a>
+                @if (item.Category != null)
+                {
+                    @:, in <a href="@Url.RouteUrl("Posts.GetByCategory", new { category = item.Category.Permalink })">@item.Category.Name</a>
+                }
+            </p>
+            <p>
+                @item.Summary
+            </p>
+            <p>
+                <a href="@Url.RouteUrl("Posts.Details", new { permalink = item.Permalink })" class="btn btn-primary btn-sm">
+                    <i class="glyphicon glyphicon-circle-arrow-right"></i>&nbsp;Read more
+                </a>
+                @Html.Partial("_AdminActions", new PostDetail { Post = item })
+            </p>
+        </div>
+    }
+</section>
+
+@Html.Partial("_Paging", Model)

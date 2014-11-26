@@ -1,0 +1,30 @@
+﻿@model AspNetMvcBlog.Areas.Admin.Models.PostModel
+@{
+    string title = "Delete Post?";
+    ViewBag.Title = title;
+    ViewBag.MenuLinkPosts = true;
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            @title
+        </h1>
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="alert alert-danger alert-block">
+        <p>Are you sure delete this post?</p>
+    </div>
+
+    <p>Title: <b>@Model.Title</b></p>
+    <p>Summary: <b>@Model.Summary</b></p>
+    <br />
+    <form action="" class="form-vertical" method="post">
+        <div class="form-actions">
+            <button type="submit" class="btn btn-success">Yes</button>
+            <a href="@Url.RouteUrl("Admin.Posts.Index")" class="btn btn-default">No</a>
+        </div>
+    </form>
+</div>
