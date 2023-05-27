@@ -1,6 +1,5 @@
 # ASP.NET MVC Blog
 
-## Descrição
 Projeto desenvolvido durante o curso: 
 - [Udemy - Crie um blog em ASP .NET MVC 5, EF, Bootstrap CSS e Azure](https://www.udemy.com/course/curso-asp-net-mvc-5-e-entity-framework-completo)
 
